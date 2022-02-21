@@ -1,0 +1,41 @@
+.item {
+  height: 200px;
+  width: 300px;
+  border: 1px solid blue;
+}
+
+.button {
+  display: block;
+}
+
+body {
+  height: 100vh;
+  border: solid 1px;
+}
+
+.parent {
+  border: blue solid 1px;
+  width: 400px;
+  height: 300px;
+  position: relative;
+}
+
+/* .parent-label {
+  color: blue;
+  font-size: 16px;
+  margin: 0;
+} */
+
+.child_pos_first {
+  border: goldenrod solid 1px;
+  color: goldenrod;
+  width: 120px;
+  height: 80px;
+}
+
+.child_pos_second {
+  border: green solid 1px;
+  color: green;
+  width: 120px;
+  height: 80px;
+}
