@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="1-style.css" />
+    <title>Default Position</title>
+  </head>
+  <body>
+    <p>
+      Below we have a series of HTML elements all of which have the default
+      `position` value of `static`.
+    </p>
+    <p>
+      Note how the &lt;div&gt;s are all placed vertically, one after another,
+      but the &lt;button&gt;s are placed horizontally. This is how these
+      elements are placed according to the default document flow. This default
+      placement can be altered by the `position` property, as you'll soon see.
+      But there are other ways to effect an items placement that you've already
+      encountered.
+    </p>
+    <p>
+      Add some styles to the `button` class to make the buttons render
+      vertically. There are multiple solutions, but try to do it with a single
+      CSS property.
+    </p>
+    <p class="hint">
+      Hint
+      <span class="hint__text">Have you tried the `display` property?</span>
+    </p>
+    <!-- Hint [initially hidden]: have you tried the `display` property? -->
+    <div class="item"></div>
+    <div class="item"></div>
+    <button class="button">Click me</button>
+    <button class="button">No, click me</button>
+    <button class="button">Cancel</button>
+    <div class="item"></div>
+    <div class="item"></div>
+  </body>
+</html>
