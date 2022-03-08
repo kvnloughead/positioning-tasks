@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="1-style.css" />
-    <title>Default Position</title>
+    <link rel="stylesheet" href="style.css" />
+    <title>Static Position (the default)</title>
   </head>
   <body>
     <p>
@@ -29,7 +29,6 @@
       Hint
       <span class="hint__text">Have you tried the `display` property?</span>
     </p>
-    <!-- Hint [initially hidden]: have you tried the `display` property? -->
     <div class="item"></div>
     <div class="item"></div>
     <button class="button">Click me</button>
@@ -37,5 +36,12 @@
     <button class="button">Cancel</button>
     <div class="item"></div>
     <div class="item"></div>
+    <p class="hint">
+      Answer
+      <span class="hint__text"
+        >Applying either `display: block` or `display: flex` to the `button`
+        class will work.</span
+      >
+    </p>
   </body>
 </html>

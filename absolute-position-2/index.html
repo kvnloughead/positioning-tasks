@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Absolute Position 1</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <main class="main">
+      <div class="challenge">
+        <div class="challenge__body">
+          <h2 class="challenge__number">1</h2>
+          <div>
+            <p class="challenge__text">
+              Think back to when we were shifting elements with
+              <b>position: relative</b>. We had you move them as shown to the
+              right. You may have felt that getting it just right was a bit
+              cumbersome. For instance, at a glance it is definitely not
+              immediately apparent what dimension you need to use to shift the
+              blue container over to the left edge of its parent. You have to
+              use trial and error.
+            </p>
+            <p class="challenge__text">
+              Using absolute position in these cases can greatly simplify
+              things, because with absolute position the element can be
+              re-positioned relative to one of its parent containers, instead of
+              relative to itself.
+            </p>
+            <p class="challenge__text">
+              But there's still one more issue to consider before we can
+              position the blue container with respect to its immediate parent.
+              Try adding <b>position: absolute</b> and <b>top: 0</b> to the blue
+              container, and see what happens.
+            </p>
+          </div>
+          <img class="challenge__image" src="absolute-position-2.png" />
+        </div>
+        <div class="grandparent">
+          <div class="parent">
+            <div class="child child_pos_first">Child 1</div>
+            <div class="child child_pos_second">Child 2</div>
+          </div>
+        </div>
+      </div>
+      <div class="challenge">
+        <div class="challenge__body">
+          <h2 class="challenge__number">2</h2>
+          <div>
+            <p class="challenge__text">
+              As soon as we apply <b>top: 0</b> the parent element jumps to the
+              top of the page! Why would that be? Well, recall that phrase from
+              the previous lesson — "closest positioned ancestor". An ancestor
+              is positioned if it has a non-default position, so the immediate
+              parent of the blue container is not positioned.
+            </p>
+            <p class="challenge__text">
+              When this happens, the browser checks the next containing element
+              to see if it's positioned, and so on. Use devtools to check the
+              successive parent elements to find the first positioned ancestor.
+              Scroll down for the answer.
+            </p>
+          </div>
+        </div>
+        <div class="grandparent">
+          <div class="parent">
+            <div class="child child_pos_first">Child 1</div>
+            <div class="child child_pos_second">Child 2</div>
+          </div>
+        </div>
+        <p>
+          Which selector represents the first positioned ancestor of the blue
+          container?
+        </p>
+        <input
+          type="radio"
+          id="answer-a"
+          name="abs-pos-2"
+          value=".grandparent"
+        />
+        <label for="answer-a"><b>.grandparent</b></label>
+        <input type="radio" id="answer-b" name="abs-pos-2" value=".challenge" />
+        <label for="answer-b"><b>.challenge</b></label>
+        <input type="radio" id="answer-c" name="abs-pos-2" value=".main" />
+        <label for="answer-c"><b>.main</b></label>
+        <input type="radio" id="answer-d" name="abs-pos-2" value="body" />
+        <label for="answer-d"><b>body</b></label>
+        <input type="radio" id="answer-e" name="abs-pos-2" value="none" />
+        <label for="answer-e">None of the above</label>
+        <p class="hint">
+          Answer
+          <span class="hint__text"
+            >The answer is "None of the above". The blue container has no
+            positioned ancestors, so absolute position with reposition it with
+            respect to the document's root element. Typically this will be the
+            <b>&lt;body&gt;</b></span
+          >
+        </p>
+      </div>
+      <div class="challenge">
+        <div class="challenge__body">
+          <h2 class="challenge__number">3</h2>
+          <div>
+            <p class="challenge__text">
+              You finally have enough information to use absolute position to
+              reposition the elements as shown to the right. Make it so! A
+              solution is given below.
+            </p>
+          </div>
+          <img class="challenge__image" src="absolute-position-2.png" />
+        </div>
+        <div class="grandparent">
+          <div class="parent">
+            <div class="child child_pos_first">Child 1</div>
+            <div class="child child_pos_second">Child 2</div>
+          </div>
+        </div>
+        <p class="hint">
+          Answer
+          <span class="hint__text"
+            >First, we need to give the grandparent element a non-default
+            position. We'll use <b>position: relative</b> for this, since it
+            won't produce any unwanted side effects. Then we can position the
+            blue container absolutely and give it <b>left: 0</b>. We can omit
+            <b>top: 0</b>, since it is implied by default.</span
+          >
+          <span class="hint__text"
+            >We can position the first child absolutely by giving it a
+            <b>top</b> value equal to its height. The second child can be
+            positioned with <b>bottom: 0</b> and <b>right: 0</b></span
+          >
+          <span class="hint__text"
+            >Note that for the first child, it isn't any easier for us to
+            position the element absolutely compared to doing so relatively.
+            Each have their places.</span
+          >
+        </p>
+      </div>
+    </main>
+  </body>
+</html>

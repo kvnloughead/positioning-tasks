@@ -11,7 +11,7 @@ body {
 }
 
 .hint:hover > .hint__text {
-  display: inline;
+  display: block;
   color: green;
 }
 
@@ -21,14 +21,17 @@ body {
   border: 1px solid blue;
 }
 
-/* Answer */
 .button {
-  display: block;
 }
 
-/* Less good answer */
-.button {
+/* Answer */
+/* .button {
   display: flex;
-}
+} */
+
+/* Less good answer */
+/* .button {
+  display: flex;
+} */
 /* This actually does work, because a flex-container acts like a block element with respect to its position in the flow. But in this case it isn't the best
 solution, because of potential side effects down the line. */

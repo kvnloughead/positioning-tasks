@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Relative position</title>
+    <link href="2-style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <main class="main">
+      <div class="challenge">
+        <div class="challenge__body">
+          <h2 class="challenge__number">1</h2>
+          <p class="challenge__text">
+            Let's practice relative positioning. Below we have a parent
+            &lt;div&gt; that contains two child &lt;div&gt;s. Currently the
+            children have the default `position`, so they are placed vertically
+            starting from the upper left corner of their parent. We can shift
+            the position of these elements using the `top`, `right`, `bottom`,
+            and `left` properties. Try using relative position to match the
+            layout on the right.
+          </p>
+          <img class="challenge__image" src="relative-1.png" />
+          <!-- Answer: add position: relative; left: 120px; to child 1 -->
+          <!--                              or right: -120px; -->
+        </div>
+        <div class="parent">
+          <div class="child child_pos_first">Child 1</div>
+          <div class="child child_pos_second">Child 2</div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

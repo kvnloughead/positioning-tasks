@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Relative Position2</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <main class="main">
+      <div class="challenge">
+        <div class="challenge__body">
+          <h2 class="challenge__number">2</h2>
+          <p class="challenge__text">
+            Did you noticed that when you moved the first child, the position of
+            the second child stays the same? This is how `position: relative`
+            works. Initially, the element is placed according to the normal
+            document flow, so neighboring elements respect its borders. But if
+            you shift its position using `top`, `right`, and so on, other
+            elements behave as if it hadn't moved at all. Use this fact to shift
+            the second child as shown to the right.
+          </p>
+          <img class="challenge__image" src="relative-position-2.png" />
+          <!-- Answer: add position: relative; top: -120px; right: 60px; to child 2 -->
+          <!-- or some other reasonable combination -->
+        </div>
+        <div class="parent">
+          <div class="child child_pos_first">Child 1</div>
+          <div class="child child_pos_second">Child 2</div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

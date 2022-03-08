@@ -1,0 +1,52 @@
+.main {
+  height: 800px;
+  margin: 32px;
+  position: relative;
+}
+
+.challenge {
+  padding: 100px 0;
+  border-bottom: 2px solid black;
+}
+
+.challenge__body {
+  display: flex;
+  gap: 30px;
+  max-width: 600px;
+  margin: auto;
+  margin-bottom: 60px;
+}
+
+.challenge__number {
+  margin: 0;
+}
+
+.challenge__text {
+  margin: 0;
+}
+
+.challenge__image {
+  width: 100px;
+  height: 100px;
+}
+
+.parent {
+  margin: auto;
+  background-color: blue;
+  width: 400px;
+  height: 300px;
+}
+
+.child_pos_first {
+  background-color: goldenrod;
+  color: white;
+  width: 120px;
+  height: 80px;
+}
+
+.child_pos_second {
+  color: white;
+  background-color: green;
+  width: 120px;
+  height: 80px;
+}
