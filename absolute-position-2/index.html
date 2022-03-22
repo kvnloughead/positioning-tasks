@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>Absolute Position 1</title>
+    <title>Absolute Position 2</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
@@ -56,51 +56,11 @@
             </p>
             <p class="challenge__text">
               When this happens, the browser checks the next containing element
-              to see if it's positioned, and so on. Use devtools to check the
-              successive parent elements to find the first positioned ancestor.
-              Scroll down for the answer.
+              to see if it's positioned, and so on. If you use devtools to check
+              each successive parent element of the blue box you'll note that
+              none of its ancestors are positioned. When this happens, the
+              container will be positioned with respect the the browser window.
             </p>
-          </div>
-        </div>
-        <div class="grandparent">
-          <div class="parent">
-            <div class="child child_pos_first">Child 1</div>
-            <div class="child child_pos_second">Child 2</div>
-          </div>
-        </div>
-        <p>
-          Which selector represents the first positioned ancestor of the blue
-          container?
-        </p>
-        <input
-          type="radio"
-          id="answer-a"
-          name="abs-pos-2"
-          value=".grandparent"
-        />
-        <label for="answer-a"><b>.grandparent</b></label>
-        <input type="radio" id="answer-b" name="abs-pos-2" value=".challenge" />
-        <label for="answer-b"><b>.challenge</b></label>
-        <input type="radio" id="answer-c" name="abs-pos-2" value=".main" />
-        <label for="answer-c"><b>.main</b></label>
-        <input type="radio" id="answer-d" name="abs-pos-2" value="body" />
-        <label for="answer-d"><b>body</b></label>
-        <input type="radio" id="answer-e" name="abs-pos-2" value="none" />
-        <label for="answer-e">None of the above</label>
-        <p class="hint">
-          Answer
-          <span class="hint__text"
-            >The answer is "None of the above". The blue container has no
-            positioned ancestors, so absolute position with reposition it with
-            respect to the document's root element. Typically this will be the
-            <b>&lt;body&gt;</b></span
-          >
-        </p>
-      </div>
-      <div class="challenge">
-        <div class="challenge__body">
-          <h2 class="challenge__number">3</h2>
-          <div>
             <p class="challenge__text">
               You finally have enough information to use absolute position to
               reposition the elements as shown to the right. Make it so! A
@@ -125,7 +85,7 @@
             <b>top: 0</b>, since it is implied by default.</span
           >
           <span class="hint__text"
-            >We can position the first child absolutely by giving it a
+            >We can position the first child absolutely by giving it a negative
             <b>top</b> value equal to its height. The second child can be
             positioned with <b>bottom: 0</b> and <b>right: 0</b></span
           >
